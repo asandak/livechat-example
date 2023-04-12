@@ -15,7 +15,7 @@ services:
       - "POSTGRES_PASSWORD=postgresql"
       - "POSTGRES_DB=livechat-example"
     restart: on-failure
-
+         -image:migrate:fail
   migrate:
     image: migrate:latest
     container_name: "migrate"
